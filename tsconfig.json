@@ -1,12 +1,27 @@
 {
   "compilerOptions": {
-    // Ensure that .d.ts files are created by tsc, but not .js files
     "declaration": true,
     "emitDeclarationOnly": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowJs": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src/**/*"
+  ]
 }
