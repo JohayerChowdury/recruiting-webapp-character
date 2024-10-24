@@ -84,6 +84,19 @@ Character sheets are defined by the following high-level concepts
 - Display each skill in a row in a separate section. For example, Acrobatics
   - for a character with 12 dexterity may look like `Acrobatics - points: 3 [+] [-] modifier (Dex): 2 total: 5`
 
-TO BE COMPLETED 6. Save the character(s) to an API so they can be retrieved when the app starts next time. - Make a post request with a JSON payload to https://recruiting.verylongdomaintotestwith.ca/api/{{github_username}}/character to save data, and a get request to https://recruiting.verylongdomaintotestwith.ca/api/{{github_username}}/character to retrieve the data. It will accept any valid JSON blob and return the most recent version - for example, if your github username is mjohnston, you would use https://recruiting.verylongdomaintotestwith.ca/api/{mjohnston}/character (include the curly braces) - you must include a content-type header of application/json for the post to be accepted 7. Implement a maximum on all attributes of 70. For example, if a character has 20 strength and 10 for all other attributes, they must decrease one before they can increase another 8. Add the ability to edit multiple characters simultaneously with the same rules above 9. Add a Skill Check section for each character. This represents a character's attempt to perform an action - the character is successful if they meet or exceed the DC (see below) of the skill check. Add the total skill to a random number between 1 and 20 inclusive, if this meets or exceeds the DC the skill check is successful, otherwise it's a failure - Add the following controls to the UI - skill: a dropdown to specify what skill we're using in the check, see `SKILL_LIST` - DC: An input that collects a number. The minimum value the character must meet to succeed - Roll: a button that will trigger the random number generation - When the Roll button is clicked, display the following - What the random number generated was - If the skill check is successful or a failure 10. Add a party skill check section. This is the same as the above, except we should use the character with the highest skill total to attempt the action
+TO BE COMPLETED 
+
+6. Save the character(s) to an API so they can be retrieved when the app starts next time. - Make a post request with a JSON payload to https://recruiting.verylongdomaintotestwith.ca/api/{{github_username}}/character to save data, and a get request to https://recruiting.verylongdomaintotestwith.ca/api/{{github_username}}/character to retrieve the data. It will accept any valid JSON blob and return the most recent version - for example, if your github username is mjohnston, you would use https://recruiting.verylongdomaintotestwith.ca/api/{mjohnston}/character (include the curly braces) - you must include a content-type header of application/json for the post to be accepted
+7. Implement a maximum on all attributes of 70. For example, if a character has 20 strength and 10 for all other attributes, they must decrease one before they can increase another
+8. Add the ability to edit multiple characters simultaneously with the same rules above
+9. Add a Skill Check section for each character. This represents a character's attempt to perform an action - the character is successful if they meet or exceed the DC (see below) of the skill check. Add the total skill to a random number between 1 and 20 inclusive, if this meets or exceeds the DC the skill check is successful, otherwise it's a failure
+    - Add the following controls to the UI
+    - skill: a dropdown to specify what skill we're using in the check, see `SKILL_LIST`
+      - DC: An input that collects a number. The minimum value the character must meet to succeed
+      - - Roll: a button that will trigger the random number generation
+        - - When the Roll button is clicked, display the following
+    - What the random number generated was
+    - If the skill check is successful or a failure
+11. Add a party skill check section. This is the same as the above, except we should use the character with the highest skill total to attempt the action
 
 - Show which character was selected to attempt the action
